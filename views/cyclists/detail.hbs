@@ -1,0 +1,18 @@
+<h5>{{ cyclist.name }}</h5>
+<small><i class="fa fa-steam"></i> {{ cyclist.team }}</small>
+<small><i class="fa fa-bicycle"></i> {{ cyclist.bike }}</small>
+<small><i class="fa fa-trophy"></i> {{ cyclist.victories }}</small>
+
+<div>
+    <a href="/cyclists/{{cyclist.id}}/edit">Edit</a>
+</div>
+
+
+
+<div>
+    <form action="/cyclists/{{cyclist.id}}/delete" method="POST">
+        <button type="submit" class="btn btn-danger btn-sm">
+            Delete
+        </button>
+    </form>
+</div>

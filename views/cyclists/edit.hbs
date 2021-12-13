@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-md-6">
+    {{#if errors}}
+      <div class="alert alert-danger">
+        {{#each errors as |error|}}
+          <div>{{error}}</div>
+        {{/each}}
+      </div>
+    {{/if}}
+
+    <form action="/cyclists/{{cyclist.id}}" method="post">
+      <div class="input-group mb-1">
+        <span class="input-group-text"><i class="fa fa-user fa-fw"></i></span>
+        <input value="{{cyclist.name}}" type="text" name="name" class="form-control" placeholder=">Company name...">
+      </div>
+    
+      <div class="input-group mb-1">
+        <span class="input-group-text"><i class="fa fa-steam fa-fw"></i></span>
+        <input value="{{cyclist.team}}" type="text" name="email" class="form-control" placeholder="name@example.org">
+      </div>
+    
+      <div class="input-group mb-2">
+        <span class="input-group-text"><i class="fa fa-bycicle fa-fw"></i></span>
+        <input value="{{cyclist.bike}}" type="text" name="adress" class="form-control" placeholder="adress">
+      </div>
+      
+      <div class="input-group mb-2">
+        <span class="input-group-text"><i class="fa fa-trophy fa-fw"></i></span>
+        <input value="{{cyclist.victories}}" type="text" name="adress" class="form-control" placeholder="adress">
+      </div>
+    
+      <div class="d-grid">
+        <button class="btn btn-primary" type="submit">Edit Cyclists</button>
+      </div>
+    </form>
+  </div>
+</div>
